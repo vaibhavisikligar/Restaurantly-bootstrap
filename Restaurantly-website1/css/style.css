@@ -1,0 +1,671 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    list-style: none;
+}
+html{
+    font-size: 16px;
+}
+@media screen and (max-width: 992px){
+    html{
+        font-size: 10px;
+    }
+}
+h1,h2,h3,h4,h5,h6{
+    margin-bottom: 0;
+    font-family: "Playfair Display", serif;
+}
+.main-landing{
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.495);
+    height: 100vh;
+    color: white;
+}
+.main-landing img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+@media screen and (max-width: 992px){
+    .main-landing{
+        height: 80vh;
+    }
+    .main-landing img{
+        height: 100%;
+    }
+    .landing-title{
+        text-align: center;
+    }
+    .landing-desp{
+        text-align: center;
+    }
+    .right-side-video{
+        text-align: center;
+    }
+}
+.header{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 2rem;
+    background-color: rgba(5, 1, 1, 0.945);
+    color: white;
+    padding: 1rem 1.6rem;   
+}
+nav ul{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+
+}
+.book-table{
+    padding: 0.5rem 1rem;
+    border-radius: 2rem;
+    border: 2px solid rgba(255, 174, 0, 0.856);
+    background-color: transparent;
+    color: white;
+    font-size: 1rem;
+}
+.logo h3{
+    font-size: 2rem;
+    font-weight: 300;
+}
+.close-btn{
+    display: none;
+}
+.menu-btn{
+    display: none;
+}
+@media screen and (max-width: 992px){
+    nav ul{
+        font-size: 1.7rem;
+        position: fixed;
+        flex-direction: column;
+        width: 50%;
+        height: 100vh;
+        top: 0;
+        left: -50%;
+        background-color: rgba(255, 174, 0, 0.856);
+    }
+    .close-btn{
+        display: inline-flex;
+        padding: 0.5rem 0.5rem;
+        color: black;
+        background-color: white;
+    }
+    .menu-btn{
+        display: inline-flex;
+        padding: 0.5rem 0.5rem;
+        color: black;
+        background-color: white;
+    }
+    .open-list{
+        left: 0;
+    }
+}
+/* ----------------------------------landing-section--------------------------- */
+.landing-title h2{
+    margin-top: 5rem;
+    font-size: 3rem;
+    color: white;
+   
+}
+.landing-title h2 span{
+    color:  rgba(255, 174, 0, 0.856);
+}
+.landing-title h4{
+   
+    font-size: 1.8rem;
+    font-weight: 300;
+    color: white;
+}
+
+.landing-desp{
+    width: 100%;
+    padding: 1rem 0;
+    margin-top: 2rem;
+   
+}
+.landing-desp .our-menu{
+    padding: 0.5rem 1rem;
+    border-radius: 2rem;
+    border: 2px solid rgba(255, 174, 0, 0.856);
+    background-color: transparent;
+    color: white;
+    font-size: 1rem;
+}
+.landing-desp .booka-table1{
+    padding: 0.5rem 1rem;
+    border-radius: 2rem;
+    border: 2px solid rgba(255, 174, 0, 0.856);
+    background-color: transparent;
+    color: white;
+    font-size: 1rem;
+}
+.right-side-video{
+    
+    width: 100%;
+    padding: 1rem 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   margin-top: 4rem;
+}
+
+.video{
+    width: 6rem;
+    height: 6rem;
+    color: white;
+    border-radius: 50%;
+    background-color: rgba(255, 174, 0, 0.596);
+    display: flex;
+    justify-content: center;
+    align-items:center;
+}
+.video span{
+    width: 50px;
+    height: 50px;
+    background-color: rgba(255, 174, 0, 0.856);
+    border-radius: 50%;
+    position: absolute;
+    z-index: -1;
+    animation-name: zooming;
+    animation-duration: 1.8s;
+    animation-iteration-count: infinite;
+}
+.video span:nth-child(2) {
+    animation-delay: 0.4s;
+}
+.video span:nth-child(3){
+    animation-delay: 0.8s;
+}
+@keyframes zooming{
+    from{
+
+    }to{
+        transform: scale(2);
+        opacity: 0;
+    }
+}
+/* --------------------about--------------------------------- */
+.about-section{
+    background-image: url(../img/about/about.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-blend-mode: overlay;
+    background-color: rgba(0, 0, 0, 0.808);
+    color: white;
+}
+.about-desp h4{
+    font-size: 1.7rem;
+    margin-bottom: 1rem;
+}
+.about-desp p{
+    font-size: 1rem;
+    font-style: italic;
+}
+.about-desp ul{
+    line-height: 1.5rem;
+}
+.about-desp ul li{
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+    
+   
+}
+.about-desp ul li i{
+    font-size: 1.4rem;
+    color:  rgba(255, 174, 0, 0.596);
+}
+   
+.about-img img{
+    width: 100%;
+    border: 0.3rem solid gray;
+}
+.about-img img:hover {
+    transform: scale(1.02);
+}
+/* --------------------------------why us-------------------------------------- */
+.why-us{
+    background-color: rgb(12, 11, 9);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    min-height: 400px;
+}
+.why-us-header p{
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 0.767);
+}
+.why-us-header h3{
+    font-size: 2.3rem;
+    font-weight: 600;
+    color:  rgba(255, 174, 0, 0.856);
+    margin-bottom: 1rem;
+}
+.card{
+    margin-top: 1rem;
+    padding: 1rem 1.4rem;
+    background-color: rgb(26, 24, 20 );
+    color: rgba(255, 255, 255, 0.767);
+}
+.card-desp{
+    width: 100%;
+    padding: 0.5rem 0.5rem;
+   
+}
+.card-desp h2{
+    font-size: 1.8rem;
+    color: rgba(255, 174, 0, 0.856);
+    margin-bottom: 1.4rem;
+}
+
+.card-desp h4{
+    font-size: 1.4rem;
+    margin-bottom: 1.4rem;
+}
+.card-desp p{
+    font-size: 0.9rem;
+}
+.card:hover{
+    background-color:  rgba(255, 174, 0, 0.856);
+    color: rgba(255, 255, 255, 0.767);
+}
+
+/* -----------------------------menu----------------------------- */
+.menu-section{
+    background-color: rgb(26, 24, 20 );
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.menu-title p {
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 0.767);
+}
+.menu-title h3{
+    font-size: 2.3rem;
+    font-weight: 600;
+    color:  rgba(255, 174, 0, 0.856);
+    margin-bottom: 1rem; 
+}
+.menu-list ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    font-size: 1.2rem;
+    color: rgba(255, 255, 255, 0.767);
+}
+.dish{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 2rem;
+    color: rgba(255, 255, 255, 0.767);
+    line-height: 0.1rem;
+}
+.dish-img{
+    width: 6rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 5px solid gray;
+    border-radius: 50%;
+}
+.dish-img img{
+    width: 100%;
+    border-radius: 50%;
+}
+.nav-tabs{
+    --bs-nav-tabs-border-width: none;
+}
+.nav-tabs .nav-link{
+    color: rgba(255, 255, 255, 0.767);
+}
+.nav-tabs .nav-link.active{
+    color: rgba(255, 174, 0, 0.856);
+    background-color: rgb(26, 24, 20 );
+}
+/* ----------------------event------------------------------ */
+.event-section{
+    background-image: url(../img/event/events-bg.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-blend-mode: overlay;
+    background-color: rgba(0, 0, 0, 0.808);
+    color: white;
+}
+.event-header p{
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 0.767);
+}
+.event-header h3{
+    font-size: 2.3rem;
+    font-weight: 600;
+    color:  rgba(255, 174, 0, 0.856);
+    margin-bottom: 2rem; 
+}
+.event-img img{
+    width: 100%;
+}
+  
+.event-desp h3{
+    font-size: 1.6rem;
+    font-weight: 600;
+    color:  rgba(255, 174, 0, 0.856);
+    margin-bottom: 1rem; 
+}
+.event-desp .price{
+    width: 50px;
+    border-bottom: 2px solid wheat;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 0.5rem o.5rem;
+    font-size: 1.3rem;
+    font-weight: 600;
+}
+.event-desp .first-para{
+    font-size: 1.1rem;
+    font-weight: 300;
+    font-style: italic;
+}
+.event-desp ul li {
+    font-size: 1rem;
+    line-height: 2rem;
+}
+.bx-wrapper{
+    background: rgba(0, 0, 0, 0.808);
+    border: none;
+    box-shadow: none;
+    padding: 1rem 2rem;
+}
+.bx-wrapper .bx-pager.bx-default-pager a.active{
+    background: rgba(255, 174, 0, 0.856);
+}
+
+/* ---------------------reservation----------------------------- */
+.reservation-section{
+    background-color: rgb(26, 24, 20 );
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.reservation-header p{
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 0.767);
+}
+.reservation-header h3{
+    font-size: 2.8rem;
+    font-weight: 600;
+    color:  rgba(255, 174, 0, 0.856);
+    margin-bottom: 1rem; 
+}
+.reservation-contact input{
+    width: 100%;
+    padding: 0.5rem 0.2rem;
+    color: rgba(255, 174, 0, 0.856);
+    background: transparent;
+    border: 1px solid rgba(255, 174, 0, 0.856);
+}
+textarea{
+    width: 100%;
+    padding: 0.5rem 0.6rem ;
+    color: rgba(255, 174, 0, 0.856);
+    background: transparent;
+    border: 1px solid rgba(255, 174, 0, 0.856);
+}
+.rese-btn{
+    padding: 0.5rem 1rem;
+    border-radius: 2rem;
+    border: none;
+    background-color: rgba(255, 174, 0, 0.856);
+    color: white;
+    font-size: 1rem;
+}
+/* --------------------------------review-section------------------------ */
+.review-section{
+    background-color: black;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.review-header p{
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 0.767);
+}
+.review-header h3{
+    font-size: 2.6rem;
+    font-weight: 600;
+    color:  rgba(255, 174, 0, 0.856);
+    margin-bottom: 1rem; 
+}
+.review{
+   width: 100%;
+   padding: 1rem 1rem;
+   margin: 1rem 0;
+   
+}
+.review-desp{
+    width: 100%;
+    padding: 1rem 1.9rem;
+    border: none;
+    border-radius: 1rem;
+    background-color: rgb(26, 24, 20 );
+    
+}
+.review-desp p{
+    font-size: 1.01rem;
+    font-style: italic;
+    font-weight: 300;
+    color: white;
+}
+.review-desp p i{
+    font-size: 1.3rem;
+    color: rgba(255, 174, 0, 0.856);
+}
+.review-img{
+    width: 100px;
+}
+.review-img img{
+    width: 90px;
+    border-radius: 50%;
+    border: 4px solid gray;
+    margin: -1.6rem 1rem ;
+    position: relative;
+    z-index: 2;
+}
+/* ----------------------------gallery----------------------- */
+.gallery{
+    background-color: rgb(26, 24, 20 );
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.gallery-header p {
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 0.767);
+}
+.gallery-header h3{
+    font-size: 2.3rem;
+    font-weight: 600;
+    color:  rgba(255, 174, 0, 0.856);
+    margin-bottom: 1rem; 
+}
+.gallery-img{
+    width: 100%;
+    padding: 1rem 1rem;
+}
+.gallery-img img{
+    width: 100%;
+}
+/* -----------------------------------chef--------------------- */
+.chef-section{
+    background-color: black;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.chef-header p{
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 0.767);
+}
+.chef-header h3{
+    font-size: 2.3rem;
+    font-weight: 600;
+    color:  rgba(255, 174, 0, 0.856);
+    margin-bottom: 1rem; 
+}
+.chef-img{
+    width: 100%;
+}
+.chef-img img{
+    width: 100%;
+}
+.chef{
+    position: relative;
+   
+}
+.chef-desp{
+    display: none;
+}
+.chef:hover .chef-desp{
+    content:"" ;
+    display: inline-block;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.767);
+    border: none;
+    background-blend-mode: overlay;
+    background-color: rgba(0, 0, 0, 0.808);
+    color: white;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+    transition: 5s;
+}
+.chef:hover .chef-desp h6{
+    font-size: 1.2rem;
+}
+
+.chef:hover .chef-desp p{
+    font-size: 1rem;
+    font-weight: 300;
+}
+.chef:hover .chef-desp .icon{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.3rem;
+    gap: 1rem;
+}
+/* ----------------------contact----------------------- */
+.contact-section{
+    background-color: rgb(26, 24, 20 );
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.contact-title p{
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 0.767);
+}
+.contact-title h3{
+    font-size: 2.3rem;
+    font-weight: 600;
+    color:  rgba(255, 174, 0, 0.856);
+    margin-bottom: 1rem; 
+}
+.our-address{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1rem;
+    color: white;
+    line-height: 1.9rem;
+}
+.our-add-desp h4{
+    font-size: 1.5rem;
+}
+.our-add-desp p{
+    font-size: 0.9rem;
+}
+.our-email{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1rem;
+    color: white;
+    line-height: 1.9rem;
+}
+.our-email-desp p{
+    font-size: 0.9rem;
+}
+.our-email-desp h4{
+    font-size: 1.5rem;
+}
+.call-us{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1rem;
+    color: white;
+    line-height: 1.9rem;
+}
+.call-desp p{
+    font-size: 0.9rem;
+}
+.call-desp h4{
+    font-size: 1.5rem;
+}
+.Opening{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1rem;
+    color: white;
+    line-height: 1.9rem;
+}
+.open-desp p{
+    font-size: 0.9rem;
+}
+.open-desp p span{
+    color:  rgba(255, 174, 0, 0.856);
+}
+.open-desp h4{
+    font-size: 1.5rem;
+}
+.contact-details input{
+    width: 100%;
+    padding: 0.5rem 0.2rem;
+    color: rgba(255, 174, 0, 0.856);
+    background: transparent;
+    border: 1px solid rgba(255, 174, 0, 0.856);
+}
+.send-btn{
+    padding: 0.5rem 1rem;
+    border-radius: 2rem;
+    border: none;
+    background-color:  rgba(255, 174, 0, 0.856);
+    color: white;
+    font-size: 1rem;
+}
